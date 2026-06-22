@@ -1,0 +1,85 @@
+body {
+  overflow: hidden;
+  background-color: black;
+}
+
+.full-screen {
+  inline-size: 100vw;
+  block-size: 100vh;
+  /* max-inline-size: 3000px; */
+  background-image: url('./images/image-3.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @media (width < 910px) {
+    background-image: url('./images/image-7.png');
+    background-repeat: no-r;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+audio {
+  position: absolute;
+  filter: invert(100%) hue-rotate(180deg) brightness(1.2);
+  opacity: 0.4;
+  transition: opacity 0.3s;
+  top: 0%;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.calculator {
+  background-image: url('./images/image-6.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  inline-size: 550px;
+  block-size: 550px;
+
+  justify-content: center;
+
+  input {
+    block-size: 30px;
+    border: none;
+    background-color: #2b2d26;
+    color: rgb(141, 141, 74);
+  }
+
+  .screen {
+    position: absolute;
+    inline-size: 140px;
+    font-size: 25px;
+    block-size: 38px;
+    top: 21%;
+    border-radius: 4px;
+
+    left: 37.6%;
+  }
+  .line-1 {
+    position: absolute;
+    top: 36.5%;
+    left: 35%;
+  }
+  .line-2 {
+    position: absolute;
+    top: 43%;
+    left: 35.3%;
+  }
+  .line-3 {
+    position: absolute;
+    top: 49%;
+    left: 35.4%;
+  }
+  .line-4 {
+    position: absolute;
+    top: 55%;
+    left: 35%;
+  }
+  .btn {
+    opacity: 0;
+  }
+}

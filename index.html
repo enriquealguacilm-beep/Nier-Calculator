@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      /* dseg14-classic-latin-400-normal */
+      @font-face {
+        font-family: 'DSEG14 Classic';
+        font-style: normal;
+        font-display: swap;
+        font-weight: 400;
+        src:
+          url(https://cdn.jsdelivr.net/fontsource/fonts/dseg14-classic@latest/latin-400-normal.woff2)
+            format('woff2'),
+          url(https://cdn.jsdelivr.net/fontsource/fonts/dseg14-classic@latest/latin-400-normal.woff)
+            format('woff');
+      }
+      .screen {
+        font-family: 'DSEG14 Classic';
+      }
+    </style>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <script
+      type="text/javascript"
+      src="./calculator.js"
+      charset="UTF-8"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Calculadora Nier</title>
+  </head>
+  <body>
+    <div class="full-screen">
+      <main>
+        <audio src="./images/BSO.mp3" controls loop="1"></audio>
+
+        <div
+          class="calculator row position-absolute top-50 start-50 translate-middle-x"
+        >
+          <div class="col-12 p-0">
+            <input type="text" id="pantalla" class="screen" />
+          </div>
+          <div class="col-12 line-1">
+            <input
+              type="button"
+              value="1"
+              onclick="addScreen('1')"
+              class="btn"
+            />
+            <input
+              type="button"
+              value="2"
+              onclick="addScreen('2')"
+              class="btn"
+            />
+            <input
+              type="button"
+              value="3"
+              onclick="addScreen('3')"
+              class="btn"
+            />
+            <input
+              type="button"
+              value="+"
+              onclick="addScreen('+')"
+              class="btn"
+            />
+          </div>
+          <div class="col-12 line-2">
+            <input
+              type="button"
+              value="4"
+              onclick="addScreen('4')"
+              class="btn"
+            />
+            <input
+              type="button"
+              value="5"
+              onclick="addScreen('5')"
+              class="btn"
+            />
+            <input
+              type="button"
+              value="6"
+              onclick="addScreen('6')"
+              class="btn"
+            />
+            <input
+              type="button"
+              value="-"
+              onclick="addScreen('-')"
+              class="btn"
+            />
+          </div>
+          <div class="col-12 line-3">
+            <input
+              type="button"
+              value="7"
+              onclick="addScreen('7')"
+              class="btn"
+            />
+            <input
+              type="button"
+              value="8"
+              onclick="addScreen('8')"
+              class="btn"
+            />
+            <input
+              type="button"
+              value="9"
+              onclick="addScreen('9')"
+              class="btn"
+            />
+            <input
+              type="button"
+              value="*"
+              onclick="addScreen('*')"
+              class="btn"
+            />
+          </div>
+          <div class="col-12 line-4">
+            <input type="button" value="=" onclick="calculate()" class="btn" />
+            <input
+              type="button"
+              value="C"
+              onclick="clearScreen()"
+              class="btn"
+            />
+            <input
+              type="button"
+              value="0"
+              onclick="addScreen('0')"
+              class="btn"
+            />
+            <input
+              type="button"
+              value="/"
+              onclick="addScreen('/')"
+              class="btn"
+            />
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script>
+      window.addEventListener(
+        'click',
+        () => {
+          const audio = document.querySelector('audio');
+          audio.volume = 0.2;
+          audio.play();
+        },
+        { once: true }
+      );
+    </script>
+  </body>
+</html>
